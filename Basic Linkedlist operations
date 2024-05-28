@@ -36,5 +36,39 @@ class Linkedlist:
         
         self.head = self.head.next
         self.size -=1
+
+
         
+    def getFirst(self):
+        if self.size == 0:
+            print('List is empty')
+            return -1
+        else:
+            return self.head.data
+            
+    
+    def getLast(self):
+        if self.size == 0:
+            print('list is empty')
+            return -1
+        else:
+            return self.tail.data
+            
+    def getAt(self,idx):
+        if self.size == 0:
+            print('list is empty')
+            return -1
+            
+        elif idx<0 or idx > self.size:
+            print('invalid input')
+        else:
+            temp = self.head
+            i = 0
+            while i < idx:
+                temp = temp.next
+                i+=1
+                return temp.data
+            
+    
+
         
